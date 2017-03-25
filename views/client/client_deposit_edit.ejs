@@ -1,0 +1,27 @@
+<% include ../layout/header %>
+
+  <body>
+
+    <% include client_menubar %>
+
+    <div class="container">
+      <h1 class="page-header">Deposit - Edit</h1>
+
+      <form class="form-horizontal" action="/client/deposit/edit/<%= trx.id %>" method="post">
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Balance</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="balance" placeholder="Balance" value="<%= trx.balance %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <a href="/client/deposit" class="btn btn-default">Cancel</a>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </body>
+</html>

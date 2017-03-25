@@ -1,0 +1,13 @@
+<% include ../layout/header %>
+
+  <body>
+
+    <% include client_menubar %>
+
+    <div class="container">
+      <h1 class="page-header">Balance</h1>
+      <h2><%= helper.toCurrency(sum) %></h2>
+    </div>
+
+  </body>
+</html>
